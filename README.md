@@ -33,6 +33,16 @@
 
 ### 深度有趣
 
+## sql
+
+### Oracle操作plsql一些基本的数据检视操作：
+
++ SELECT DISTINCT(col_name) FROM table_name T
++ SELECT (col_name),COUNT(*) FROM table_name T GROUP BY col_name
++ SELECT COUNT(col_name1),COUNT(col_name2) FROM table_name T
+
+基本的检视和清洗也可以考虑在数据库中做，也可以考虑抽取出来之后做
+
 ## [Java和算法的每日刷题](https://github.com/A-ZHANG1/Exercise-Book)
 
 

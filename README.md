@@ -5,8 +5,10 @@
 ## 大蛇
 
 ### 逼格Data
-+ TDH操作流程
 
++ [TDH](https://www.bookstack.cn/read/HadoopAndSparkDataStudy/Content-3-chapter0303.md)操作流程
+
+```
   oracle  --  sqoop（select语句） -->  hdfs
  
            -- 连接hive（beeline） -->  hive
@@ -16,11 +18,49 @@
               加载数据(load)
           
           --> ... inceptor 
-  
+```  
 
                              
                 
 + 工作流引擎：workflow
+
+workflow : 10.123.195.8:9091 用户名:workflow 密码:Transwarp4T
+           extract_data 脚本获取
+           
++ hdfs启动过程[shell command in linux]()
+
+```shell
+cd /var/lib/workflow2/TDH-Client
+source init.sh
+export HADOOP_USER_NAME=hdfs
+```
+
++ [hadoop shell指令](http://hadoop.apache.org/docs/r1.0.4/cn/hdfs_shell.html)
+
+```shell
+#hadoop fs -echo
+#显示数据行数
+hadoop fs -cat /inceptor1/user/hive/warehouse/original.db/hive/twoscreening | wc -l
+#打印文件内容
+hadoop fs -cat /tmp/sqoop/shells/twoscreening.sh
+#显示hdfs目录中的文件
+hadoop fs -ls /tmp/sqoop/shells
+#将脚本本地vim后放入hdfs
+hadoop fs -copyFromLocal <localFile> <hdfs/directory>
+```
+
++ 平台操作相关
+```
+#脚本文件放置路径
+   ~/sqoop_import_shells/test_incremnent.sh
+```
+
++ shell基本常识:
+
+  1. tab可联想补全
+  2. 可以尝试用iterm2 + zsh做终极shell工具
+
++ 自动脚本...啊qsb
 
 + 星环其他技术工具
 
@@ -53,22 +93,6 @@
   
 + [社群发现研究进展](https://cloud.tencent.com/developer/article/1188299) 
   腾讯171023的技术文，不同的方法和研究方向
-
-
-## TDH
-workflow : 10.123.195.8:9091 用户名:workflow 密码:Transwarp4T
-           extract_data 脚本获取
-```shell
-cd /var/lib/workflow2/TDH-Client
-source init.sh
-export HADOOP_USER_NAME=hdfs
-
-hadoop fs -ls /tmp/sqoop
-#hadoop fs -echo
-#显示数据行数
-hadoop fs -cat /inceptor1/user/hive/warehouse/original.db/hive/twoscreening | wc -l
-hadoop fs -cat /tmp/sqoop/shells/twoscreening.sh
-```
 
 
 

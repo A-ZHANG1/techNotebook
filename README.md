@@ -59,6 +59,12 @@ hadoop fs -copyFromLocal <localFile> <hdfs/directory>
 
   1. tab可联想补全
   2. 可以尝试用iterm2 + zsh做终极shell工具
+  
+```shell
+vi filename
+vim filename
+
+```
 
 + 自动脚本...啊qsb
 

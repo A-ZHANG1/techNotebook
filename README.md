@@ -47,12 +47,28 @@ hadoop fs -cat /tmp/sqoop/shells/twoscreening.sh
 hadoop fs -ls /tmp/sqoop/shells
 #将脚本本地vim后放入hdfs
 hadoop fs -copyFromLocal <localFile> <hdfs/directory>
+
+hadoop fs -get <hdfs/directory1> <hdfs/directory2>
+
+#修改shell
+hadoop fs -text $1>hvim.txt
+vim hvim.txt
+hadoop fs -rm -skipTrash $1
+hadoop fs -copyFromLocal hvim.txt $1
+rm hvim.txt
+hadoop fs -chmod 777 $1
+
 ```
 
 + 平台操作相关
 ```
 #脚本文件放置路径
    ~/sqoop_import_shells/test_incremnent.sh
+
+# terminal快捷操作
+   command shift r 搜索最近使用的命令
+   
+   中间滚轴复制
 ```
 
 + shell基本常识:

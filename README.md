@@ -118,7 +118,7 @@ vim filename
 
 ## [IOT]
 
-+ wifi | 蜂窝网络：组网NSA 
++ wifi | 蜂窝网络：[组网NSA](https://blog.csdn.net/liuyukuan/article/details/90641088) 
 
   蜂窝网络中一个基站（路由、网关）的覆盖范围为六角形；相邻六边形之间信号频率不同（防止发生信号间的相互干扰）；5G网络可以复用部分4G基站，以半自组网的方式完成覆盖（？2-》3-》4G转换的完成时间和方式）；？蜂窝网络和wifi只是通信协议不同（wuxi-free与4G在虹桥车站连接问题）；
   
@@ -145,7 +145,7 @@ vim filename
 
 ## 设计原则
 
-+ [面向对象](https://segmentfault.com/a/1190000020319171#articleHeader7) 还不是很会用的样子
++ [面向对象](https://segmentfault.com/a/1190000020319171#articleHeader7) 还不是很会用的样子，部分参考活动节点建模
 + 依赖注入
 + 控制反转
 + 反向代理
@@ -166,4 +166,12 @@ vim filename
 （外）供应链管控+（区块链）去中心化
 
 应用中基础设施performance要求： 通过 distributed 降低 latency 。硬件的部分交给 ?FPGA
+
+## TOdo
+
+如何隔离内存和网络带宽？
+
+亚美利剑 的Iot的研究点
+
+蜂窝网与[资源配置]：(http://tow.cnki.net/kcms/detail/detail.aspx?filename=1019650209.nh&dbcode=CRJT_CDFD&dbname=CDFD2019&v=)
 

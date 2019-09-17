@@ -217,9 +217,13 @@ vim filename
 
     + 数据集 SNAP [loc-Brightkite](http://snap.stanford.edu/data/loc-Brightkite.html)
     + 考虑空间内聚性
+    
      - geo-social network graph G = ( V , G )
+     
     + CD方法
+    
      - 综述1 ：2004, 1W+ [Finding and evaluating community struture in networks](http://www.cse.cuhk.edu.hk/~cslui/CMSC5734/newman_community_struct_networks_phys_rev.pdf)
+     
       * 图分区 ： 并行计算中需要考虑的进程(process)-通信表征为网络节点-边，以平衡处理器负载 + 最小化边数量 （NP,有启发式算法）
       * 定义网络社区 ：Fig1
       * 层次聚类 ： 常用于社会学分析  ？_hjq sjtu_

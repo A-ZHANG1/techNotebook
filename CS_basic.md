@@ -1,3 +1,4 @@
+# CS向的一些基础知识
 ## 矩阵论 
 
 可能应用在社区发现、图挖掘、大数据近似算法、并行系统开发、深度学习中
@@ -13,7 +14,9 @@
 
 + 线性系统
 
- 其状态空间描述，与离散/连续时间系统的关系，以及矩阵化的表征形式很接近很多专家信息系统的方式。参见清华[郑大钟2003 课件](https://wenku.baidu.com/view/ba5d50cc4a7302768f993969.html)[教材]（http://ftp24w.book118.com//O%E6%95%B0%E5%AD%A6%E7%A7%91%E5%AD%A6%E5%92%8C%E5%8C%96%E5%AD%A6/1%E6%95%B0%E5%AD%A6/2-2%E5%BA%94%E7%94%A8%E6%95%B0%E5%AD%A6/pdf/%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA(%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89-%E9%83%91%E5%A4%A7%E9%92%9F-%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE.pdf）
+ 其状态空间描述，与离散/连续时间系统的关系，以及矩阵化的表征形式很接近很多专家信息系统的方式。参见清华[郑大钟2003 课件](https://wenku.baidu.com/view/ba5d50cc4a7302768f993969.html)
+ 
+ 以及[教材](资料夹/线性系统理论第二版_郑大钟)
 
   1. 定义 Linear System : L(ax+by) = L(ax) + L(by)
 
@@ -40,7 +43,6 @@
 ## Hardware
 + [CPU GPU](https://blog.csdn.net/ljytower/article/details/83024517)
 
-## 
  
 ## 人
 

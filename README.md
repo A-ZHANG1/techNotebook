@@ -88,10 +88,9 @@ vim filename
 
   流上的数据挖掘： slipstream:  在流上构建复杂应用 高可用性和exactly-one语义 机器学习可运行在事件驱动的流引擎上
 
+### [语言思想及数据分析](https://github.com/A-ZHANG1/PythonExerciseBook)
 
 ### Django
-
-### 数据分析
 
 ### 深度有趣
 
@@ -131,7 +130,7 @@ vim filename
 
 + 长连接 功耗 ：瓶颈是电池， apple watch做到了18小时（和移动电源一起）
 
-+ 传感器网络
++ 传感器网络：物联网和建筑信息系统(sensor data processing)UCB 2013 [StreamFS](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-196.html)
 
 + 可视化能够辅助解决的问题 ：信号覆盖测试和建模问题 ？
 

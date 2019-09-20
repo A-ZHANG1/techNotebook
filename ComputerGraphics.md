@@ -63,4 +63,7 @@
 
 ### 论文阅读和选题
 
-1. 知识图谱生成过程[可视化](https://medium.com/@sderymail/challenges-of-knowledge-graph-part-1-d9ffe9e35214)
+1. 知识图谱生成[过程可视化](https://medium.com/@sderymail/challenges-of-knowledge-graph-part-1-d9ffe9e35214)
+2. [动态网络可视化](http://www.lix.polytechnique.fr/~maks/papers/SpectralMeasures.pdf)
+  + spectral method: 谱图理论
+  + 动态网络（时间+网络结构）：噪声中边协作进化，网络结构改变。拉普拉斯矩阵

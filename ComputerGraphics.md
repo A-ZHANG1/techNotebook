@@ -59,7 +59,13 @@
   - 节点，边，（曲）面，体
   - 视觉参数：反射率，折射率，亮度
   - 与图像（image）的转化: 直线段(图形，数学，连续) -光栅化（离散化）-> 帧frame（图像）--> 图形
-  - 
+  - 应用/优化/研究点：（硬件）和软件（大数据呈现），Accuracy -> Factually(传感，反光设备,对骨骼模型的重定向) -> Real time，变换transform/剪裁clipping/自由曲线交线intersaction/线和曲面遮挡culling，光照折射illumination使真实感可视化，云计算和网络传输，关注点预测，htweb红外室内定位5m*5m
+  - 建模： 场景，特征，物体建模；粒子系统和过程建模；
+  - 算法： animation algorithm 物体形变 受（内/外）力 2D
+  - 核糖核苷酸
+  - 15 30 72 fps 帧率 对硬件的要求：200亿 元器件
+  
++ 研究开展：老师 前辈 沟通交流能力
 
 ### 论文阅读和选题
 
@@ -67,3 +73,13 @@
 2. [动态网络可视化](http://www.lix.polytechnique.fr/~maks/papers/SpectralMeasures.pdf)
   + spectral method: 谱图理论
   + 动态网络（时间+网络结构）：噪声中边协作进化，网络结构改变。拉普拉斯矩阵
+  
+3. [供应链](https://pdfs.semanticscholar.org/c96d/3bc5fa74dc01acc70a6212a583f909435cca.pdf) intergrated sc 中的可关注结构：
+	+ 产品状态变化： material -> intermeidate -> finished 
+	+ 供应链层级化的站点：sites organized in different levels 
+	+ 需要量化的特征 :
+	  1. 需求（数量volumn、组合mix）; 过程（生产yield、停机时间machine downtime、运输可靠性transportation reliabilities）; 供应（零件质量part quality, 交付可靠性delivery reliabilities）
+	  
+	+ 输出  库存 inventory 选址和容量变化范围（柔性）
+	+ 或 物流 material flow 结构 组织结构organization structure 障碍点barrier
+	+ 信息流动 information flow 透明性是不可保证的，因此集中控制原材料 物流不可取 。分布式控制：在每个单元根据本地信息决策

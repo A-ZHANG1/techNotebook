@@ -85,3 +85,17 @@
 	+ 信息流动 information flow 透明性是不可保证的，因此集中控制原材料 物流不可取 。分布式控制：在每个单元根据本地信息决策
 	+ 网络参与者 participants of network[BIS19](https://link.springer.com/chapter/10.1007/978-3-030-20482-2_16#Sec5):suppliers, manufacturers, logistics providers, wholesalers批发商, distributors and retailers
 	+ 
+4. [基于谱的动态图变化检测](http://www.lix.polytechnique.fr/~maks/papers/SpectralMeasures.pdf)
+  1. 动态图变化捕捉：
+    + animation - time to time mapping
+    + timeline - time to space mapping[4]
+  2. 绘制技术[6,7,11,13,15,26,25]完成图探索(graph exploring)[3] update layout while preserving the mental map
+    + 基于顶点的减少节点位移
+      * 15: force-directed layout + 节点寿命vertex age 
+      * 13: force-directed layout力导向布局 + 节点固定权重node pinning weights 
+    + 基于光谱法减少节点位移
+      * 6：经典谱布局 -> 适应动态图
+      * 10,26,27: 布局后处理
+    + 畸变区/失真区检测 distortion
+      * 大型网络可视化中检测时间窗口和相关区域[16][17]
+    + 结合distorted area 和 force layout

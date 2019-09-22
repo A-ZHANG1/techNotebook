@@ -83,3 +83,5 @@
 	+ 输出  库存 inventory 选址和容量变化范围（柔性）
 	+ 或 物流 material flow 结构 组织结构organization structure 障碍点barrier
 	+ 信息流动 information flow 透明性是不可保证的，因此集中控制原材料 物流不可取 。分布式控制：在每个单元根据本地信息决策
+	+ 网络参与者 participants of network[BIS19](https://link.springer.com/chapter/10.1007/978-3-030-20482-2_16#Sec5):suppliers, manufacturers, logistics providers, wholesalers批发商, distributors and retailers
+	+ 

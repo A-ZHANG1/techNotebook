@@ -158,11 +158,10 @@ vim filename
 
 应用中基础设施performance要求： 通过 distributed 降低 latency 。硬件的部分交给 ?FPGA
 
+SigGraph2019一篇用因果图完成过程性动画的文章。过程建模是一个在图形学中也存在的概念。
+
 ## TOdo
 
 如何隔离内存和网络带宽？
 
 亚美利剑 的Iot的研究点
-
-蜂窝网与[资源配置]：(http://tow.cnki.net/kcms/detail/detail.aspx?filename=1019650209.nh&dbcode=CRJT_CDFD&dbname=CDFD2019&v=)
-

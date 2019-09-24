@@ -2,6 +2,15 @@
 
 ### 基础知识
 
+ - 属性图(property graph)
+
+   * schema问题 [官方文档](https://s3.amazonaws.com/artifacts.opencypher.org/website/materials/sql-pg-2018-0056r1-Property-Graph-Schema.pdf)schema是什么，是对边条数，属性基数的约束。LPG是否需要schema,是。由于模式(schema)是非结构化的，定义图模型较为复杂。如果选择手动定义schema,如果需要大量定义的话可以想见这个工作是枯燥乏味的，于是有（半）自动生成的必要。
+
+   * schema定义的方式：
+   * 0. [schema抽取](https://nielsdejong.nl/projects/graph/schema-extraction-methodology.pdf) 
+   * 1. 关联规则发现：[apriori算法](https://cloud.tencent.com/developer/article/1114170)产生的频繁项集合，作为关联规则，支持数据抽取
+   * 2. 通过图模式[生成合成图数据](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.84.1081&rep=rep1&type=pdf)。
+
 #### 1_图论 （静态图）
 
 #### 2_网络动力学
@@ -72,7 +81,23 @@
 2. 异构数据融合 -》 高维特征建模和降维
   + 维度建模过程 : 指标量化 -》 协方差矩阵 -》PCA主成分分析等降维方式 -> 补充/预估（批次质量测算结果）业务应用
   + 高维度数据可视化方式： 点云形式表示的知识图谱（图数据库做输入数据和中间计算结果存储）.元数据完成数据源追溯
-
+3. 数据资源管理细节
+  + 。。。
+  
+#### 图特征融合和计算
+1. [主动的知识图谱特征混合](https://www.kde.cs.uni-kassel.de/wp-content/uploads/atzmueller/paper/2017-atzmueller-kcap.pdf)。通过形式化的方式,完成交互式的半自动架构，支持特征工程(可以后续改变schema,从而知识获取；可支持数据溯源)
+  + 知识图谱中的可视化对象：
+    1. 整体的图形化的网络结构 [12]
+    2. 密集的连接子图(社群) [11]
+    3. 特殊的集群 [8]
+    4. 特征对矩阵 [本文]
+  + 方法细节：
+    1. 蓝色区域为带有该特征的样本数量的热力图
+    2. 黄色（对角线）上是该特征本身的描述
+    3. 灰色区域为两个特征间的相关性分析（过高相关性的两个特征应当被剔除，减少冗余）
+  + 统计学建模基础：离散型随机变量相关度分析的一种思路是决策树模型和信息熵相关
+  + 特征工程： [连续数值&离散类别处理方法](https://blog.csdn.net/cymy001/article/details/79154135)
+  
 #### 图query
 
 #### 图分析
@@ -97,6 +122,16 @@
       后使用SGD进行参数学习
 
   + 实现细节：1. google geoCodimg ApI 完成距离计算
+  
+#### 知识图谱可视化：
+   * 1.用于事件流监测
+   * 2. 多维标度(multi-dimensional scaling)图中，基于几何推理的异常点监测和过滤技术。,优化嵌入质量
+   * 3. 可视化辅助完成HIS系统中text-based本体生成：[SNIK 2019](http://ebooks.iospress.nl/publication/52489) 
+      - 文本读取知识到预定义csv的CSV列中
+      - csv被表征为RDF形式，画入sink知识图中
+      - [知识图](http://www.snik.eu/graph/)中的不同颜色聚类(5 colored clouds)代表从不同书中获取的知识
+      - 4个不同的RDF描述的[subontology](https://github.com/IMISE/snik-ontology)，分为hand-crafted/另3个数据源。[ontology schema](https://github.com/IMISE/snik-ontology/blob/master/meta.rdf)  
+   * 4.schema.csv上传实例层可视化 [sb+vue+d3](https://github.com/MiracleTanC/Neo4j-KGBuilder)  [python](https://github.com/liuhuanyong/LanguageKnowledgeGraph/tree/master/web_law)
 
 #### 应用
 

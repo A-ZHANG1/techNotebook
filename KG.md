@@ -84,20 +84,6 @@
 3. 数据资源管理细节
   + 。。。
   
-#### 图特征融合和计算
-1. [主动的知识图谱特征混合](https://www.kde.cs.uni-kassel.de/wp-content/uploads/atzmueller/paper/2017-atzmueller-kcap.pdf)。通过形式化的方式,完成交互式的半自动架构，支持特征工程(可以后续改变schema,从而知识获取；可支持数据溯源)
-  + 知识图谱中的可视化对象：
-    1. 整体的图形化的网络结构 [12]
-    2. 密集的连接子图(社群) [11]
-    3. 特殊的集群 [8]
-    4. 特征对矩阵 [本文]
-  + 方法细节：
-    1. 蓝色区域为带有该特征的样本数量的热力图
-    2. 黄色（对角线）上是该特征本身的描述
-    3. 灰色区域为两个特征间的相关性分析（过高相关性的两个特征应当被剔除，减少冗余）
-  + 统计学建模基础：离散型随机变量相关度分析的一种思路是决策树模型和信息熵相关
-  + 特征工程： [连续数值&离散类别处理方法](https://blog.csdn.net/cymy001/article/details/79154135)
-  
 #### 图query
 
 #### 图分析
@@ -132,6 +118,23 @@
       - [知识图](http://www.snik.eu/graph/)中的不同颜色聚类(5 colored clouds)代表从不同书中获取的知识
       - 4个不同的RDF描述的[subontology](https://github.com/IMISE/snik-ontology)，分为hand-crafted/另3个数据源。[ontology schema](https://github.com/IMISE/snik-ontology/blob/master/meta.rdf)  
    * 4.schema.csv上传实例层可视化 [sb+vue+d3](https://github.com/MiracleTanC/Neo4j-KGBuilder)  [python](https://github.com/liuhuanyong/LanguageKnowledgeGraph/tree/master/web_law)
+     
+#### 图特征融合和计算
+1. [主动的知识图谱特征混合](https://www.kde.cs.uni-kassel.de/wp-content/uploads/atzmueller/paper/2017-atzmueller-kcap.pdf)。通过形式化的方式,完成交互式的半自动架构，支持特征工程(可以后续改变schema,从而知识获取；可支持数据溯源)
+  + 知识图谱中的可视化对象：
+    1. 整体的图形化的网络结构 [12]
+    2. 密集的连接子图(社群) [11]
+    3. 特殊的集群 [8]
+    4. 特征对矩阵 [本文]
+  + 方法细节：
+    1. 蓝色区域为带有该特征的样本数量的热力图
+    2. 黄色（对角线）上是该特征本身的描述
+    3. 灰色区域为两个特征间的相关性分析（过高相关性的两个特征应当被剔除，减少冗余）
+  + 统计学建模基础：离散型随机变量相关度分析的一种思路是决策树模型和信息熵相关
+  + 特征工程： [连续数值&离散类别处理方法](https://blog.csdn.net/cymy001/article/details/79154135)
+2.encoder
+  + 三种基于PCA的特征选择方式，结合[3D可视化](https://homepages.cwi.nl/~robertl/papers/2005/viip1/paper.pdf)
+  + 基于SVM的[3D可视化方式](http://www-personal.umich.edu/~veeras/papers/4.pdf)
 
 #### 应用
 

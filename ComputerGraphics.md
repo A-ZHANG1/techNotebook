@@ -126,4 +126,11 @@
     + 畸变区/失真区检测 distortion
       * 大型网络可视化中检测时间窗口和相关区域[16][17]
     + 结合distorted area 和 force layout
+  3.谱分析
+    + 0. 谱：将信号（视频/音频/图像/图）分解为简单元素(小波基/图基)的线性组合。其中，分解元素常是线性无关(正交)的。
+    + 1.图的拉普拉斯矩阵(D-W)
+    + 2.对该矩阵的因子分解是一种谱聚类的方式
+    + 3.三种基于PCA的[3D可视化方式](https://homepages.cwi.nl/~robertl/papers/2005/viip1/paper.pdf)
+
+    
 2.3. [图语义标注](http://www.cs.cityu.edu.hk/~rynson/projects/layout/GraphicsLayout.html)完成content-aware

@@ -109,13 +109,16 @@
 	+ 网络参与者 participants of network[BIS19](https://link.springer.com/chapter/10.1007/978-3-030-20482-2_16#Sec5):suppliers, manufacturers, logistics providers, wholesalers批发商, distributors and retailers
 	+ 
 1.3 水力学模型和仿真计算 [google洪水预测模型]
+
 2.1. [链式反应装置](http://geometry.cs.ucl.ac.uk/projects/2019/causal-graphs/)
   + 因果图(Casual Grpah)支持链式反应装置(Chain reaction contraptions)
  
 2.2. [基于谱的动态图变化检测](http://www.lix.polytechnique.fr/~maks/papers/SpectralMeasures.pdf) spectral method: 谱图理论。动态网络（时间+网络结构）：噪声中边协作进化，网络结构改变。拉普拉斯矩阵。
+
   1. 动态图变化捕捉：
     + animation - time to time mapping
     + timeline - time to space mapping[4]
+    
   2. 绘制技术[6,7,11,13,15,26,25]完成图探索(graph exploring)[3] update layout while preserving the mental map
     + 基于顶点的减少节点位移
       * 15: force-directed layout + 节点寿命vertex age 
@@ -126,11 +129,11 @@
     + 畸变区/失真区检测 distortion
       * 大型网络可视化中检测时间窗口和相关区域[16][17]
     + 结合distorted area 和 force layout
+    
   3.谱分析
-    + 0. 谱：将信号（视频/音频/图像/图）分解为简单元素(小波基/图基)的线性组合。其中，分解元素常是线性无关(正交)的。
+    + 0.谱：将信号（视频/音频/图像/图）分解为简单元素(小波基/图基)的线性组合。其中，分解元素常是线性无关(正交)的。
     + 1.图的拉普拉斯矩阵(D-W)
     + 2.对该矩阵的因子分解是一种谱聚类的方式
     + 3.三种基于PCA的[3D可视化方式](https://homepages.cwi.nl/~robertl/papers/2005/viip1/paper.pdf)
 
-    
 2.3. [图语义标注](http://www.cs.cityu.edu.hk/~rynson/projects/layout/GraphicsLayout.html)完成content-aware

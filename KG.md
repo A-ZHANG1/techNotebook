@@ -117,7 +117,8 @@
       - csv被表征为RDF形式，画入sink知识图中
       - [知识图](http://www.snik.eu/graph/)中的不同颜色聚类(5 colored clouds)代表从不同书中获取的知识
       - 4个不同的RDF描述的[subontology](https://github.com/IMISE/snik-ontology)，分为hand-crafted/另3个数据源。[ontology schema](https://github.com/IMISE/snik-ontology/blob/master/meta.rdf)  
-   * 4.schema.csv上传实例层可视化 [sb+vue+d3](https://github.com/MiracleTanC/Neo4j-KGBuilder)  [python](https://github.com/liuhuanyong/LanguageKnowledgeGraph/tree/master/web_law)
+   * 4.schema.csv上传实例层可视化 [sb+vue+d3](https://github.com/MiracleTanC/Neo4j-KGBuilder)  [python](https://github.com/liuhuanyong/LanguageKnowledgeGraph/tree/master/web_law)，贝格佳卉做的元数据上传-》本体属性融合建模-》实例上传-》包络分析等数据可视化分析Demo
+   * 5.[Harvard extension CS171](https://www.cs171.org/2015/assets/slides/11-graphs.pdf)  [graph visualization ppt] http://www.cs171.org/2018/
      
 #### 图特征融合和计算
 1. [主动的知识图谱特征混合](https://www.kde.cs.uni-kassel.de/wp-content/uploads/atzmueller/paper/2017-atzmueller-kcap.pdf)。通过形式化的方式,完成交互式的半自动架构，支持特征工程(可以后续改变schema,从而知识获取；可支持数据溯源)

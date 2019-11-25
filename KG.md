@@ -2,6 +2,7 @@
 
 ### 基础知识
 
+ - [综述1： MIT2015](https://arxiv.org/pdf/1503.00759.pdf) 指出KB构造方法中有curated approach: group of experts/ collaborative approach: volunteers. linked data[21]是KG构造的一种手段
  - 属性图(property graph)
 
    * schema问题 [官方文档](https://s3.amazonaws.com/artifacts.opencypher.org/website/materials/sql-pg-2018-0056r1-Property-Graph-Schema.pdf)schema是什么，是对边条数，属性基数的约束。LPG是否需要schema,是。由于模式(schema)是非结构化的，定义图模型较为复杂。如果选择手动定义schema,如果需要大量定义的话可以想见这个工作是枯燥乏味的，于是有（半）自动生成的必要。

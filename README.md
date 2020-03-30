@@ -95,6 +95,17 @@ vim filename
 ### 深度有趣
 
 ## sql
+ 力扣262
+```{sql}
+SELECT 
+ Request_at 'Day', round(SUM(IF(Status='completed', 0, 1))/COUNT(*),2) 'Cancellation Rate'
+FROM 
+ Trips Join Users ON Client_Id = Users.Users_Id 
+WHERE 
+ Trips.Request_at >= '2013-10-01' AND Trips.Request_at <= '2013-10-03' AND Users.Banned = 'No'
+GROUP BY 
+ Trips.Request_at
+ ```
 
 ### Oracle操作plsql一些基本的数据检视操作：
 

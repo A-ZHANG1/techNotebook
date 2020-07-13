@@ -106,7 +106,30 @@ WHERE
 GROUP BY 
  Trips.Request_at
  ```
+ 连接表查询，Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people 的需求要求外连接
+ 
+ https://leetcode-cn.com/problems/nth-highest-salary/solution/mysql-zi-ding-yi-bian-liang-by-luanz/
+ 常用 单表查询 子查询 自连接
 
+ ```{sql}
+ SELECT p.FirstName, p.LastName, a.City, a.State 
+ FROM Person p left join Address a 
+ ON p.PersonId = a.personId
+ 
+SELECT id, NAME, age
+WHERE student s1
+INNER JOIN (
+ SELECT
+     id
+ FROM
+     student
+ ORDER BY
+     age
+ LIMIT 50,5
+) AS s2 ON s1.id = s2.id
+```
+### sql性能优化
+ 索引(B-Tree) 查询优化：返回的行/扫描的行
 ### Oracle操作plsql一些基本的数据检视操作：
 
 + SELECT DISTINCT(col_name) FROM table_name T

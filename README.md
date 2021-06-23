@@ -22,8 +22,6 @@
                 
 + 工作流引擎：workflow
 
-workflow : 10.123.195.8:9091 用户名:workflow 密码:Transwarp4T
-           extract_data 脚本获取
            
 + hdfs启动过程[shell command in linux]()
 

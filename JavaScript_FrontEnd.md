@@ -14,6 +14,9 @@ React官方：Now that this reducer function is pure, calling it an extra time d
 ```
 10. 对象
 
+#### TS pitfall
+interface
+https://typescript.bootcss.com/tutorials/migrating-from-javascript.html
 
 # 维护一个可变长的`<TextArea>`组成的table(`<DataGrid>` of [FluentV9](https://github.com/microsoft/fluentui))
 
@@ -24,8 +27,6 @@ This document provides a detailed explanation of the usage of the `Textarea` com
 ## Key Logic
 
 ### Ref Management
-
-#### Purpose
 
 The `ref` is used to manage the `Textarea` instances efficiently, allowing direct manipulation of DOM elements for updating their styles dynamically.
 
@@ -156,13 +157,14 @@ const onBlurRow = async(item: IRowProps) => {
 
     // Empty key is not allowed
     if (item.key === '') {
-        currentTag.keyErrorMessage = SR.TagKeyValidationMessage2;
-    } else if (currentTag.keyErrorMessage !== SR.TagKeyValidationMessage1) {
+        currentTag.keyErrorMessage = 'Empty key is not allowed';
+    } else {
         currentTag.keyErrorMessage = '';
     }
+
     // Empty value is forbidden by the backend
     if (item.value === '') {
-        currentTag.valueErrorMessage = SR.TagKeyValidationMessage2;
+        currentTag.valueErrorMessage = 'Empty value is not allowed';
     } else {
         currentTag.valueErrorMessage = '';
     }
@@ -177,14 +179,13 @@ const onBlurRow = async(item: IRowProps) => {
         try {
             if (item.oldKey && item.oldKey !== item.key) await onDeleteTag(item.oldKey);
             await onSetTag({ key: item.key, value: item.value }).then(() => {
-                currentTag.loading = false;
+                currentTag.oldKey = item.key;
             });
         } catch (error: unknown) {
             currentTag.keyErrorMessage = (error as Error).message;
         }
-        setItems([...items]);
+        currentTag.loading = false;
     }
-
     setItems([...items]);
 };
 ```

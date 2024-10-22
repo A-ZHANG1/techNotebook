@@ -1,0 +1,54 @@
+name: Azure Pipeline Demo
+
+on: [push]
+
+trigger:
+  branches:
+    include:
+      - main  # Replace with your branch name
+jobs:
+- job: BuildAndTest
+  strategy:
+    matrix:
+      job1:
+        pipelineId: '1'
+      job2:
+        pipelineId: '2'
+      job3:
+        pipelineId: '3'
+      job4:
+        pipelineId: '4'
+      job5:
+        pipelineId: '5'
+      job6:
+        pipelineId: '6'
+      job7:
+        pipelineId: '7'
+      job8:
+        pipelineId: '8'
+      job9:
+        pipelineId: '9'
+      job10:
+        pipelineId: '10'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: PowerShell@2
+    displayName: Throttle Active Runs
+    name: CheckActiveRuns
+    inputs:
+      targetType: 'inline'
+      script: |
+        $currentRuns = [int](az pipelines runs list --org $(System.CollectionUri) --project $(System.TeamProject) `
+            | ConvertFrom-Json | Where-Object { $_.state -eq "inProgress" }).count
+        
+        if ($currentRuns -ge ${{ parameters.maxParallelRuns }}) {
+          Write-Host "##vso[task.setvariable variable=currentRuns;]deny"
+          Write-Host "Too many parallel runs. Current: $currentRuns"
+          exit 1
+        } else {
+          Write-Host "##vso[task.setvariable variable=currentRuns;]allow"
+          Write-Host "Proceeding with the run."
+        }
+  - script: echo "Running pipeline $(pipelineId)"
+    displayName: 'Run Pipeline Step'

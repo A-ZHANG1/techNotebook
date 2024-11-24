@@ -7,17 +7,12 @@
 - ****: .
 - ****: .
 
-#### Chapter 2: 
+#### Chapter 2 Estimation: 
 - ****: . 
 - ****: .
 - ****: .
   
-- #### Chapter 3: 
-- ****: . 
-- ****: .
-- ****: .
-  
-- #### Chapter 4: 
+- #### Chapter 4 Rate limiter: 
 - ****: . 
 - ****: .
 - ****: .
@@ -47,7 +42,7 @@
 #### Chapter 10: Notification System
 - **Payload**: a JSON dictionary.
 - **3rd party services**: APNs, FCM, SMS Services to push notifications
-- [**Exactly Once Delivery**:](https://bravenewgeek.com/you-cannot-have-exactly-once-delivery/) reduce duplication by adding dedupe logic after rety mechanism( for reliability)
+- [**Exactly Once Delivery**:](https://bravenewgeek.com/you-cannot-have-exactly-once-delivery/) reduce duplication by adding dedupe logic after rety mechanism (for reliability)
 - **Tracking and monitoring**: https://www.datadoghq.com/blog/rabbitmq-monitoring/
 
 #### Chapter 11: News Feed System
@@ -55,15 +50,27 @@
 - **Fanout service**: get friend IDs from graph db --> deliver news feeds to friends.
   
 #### Chapter 12 Chat System: 
-- **connection**: HTTP keep-alive, polling(periodically ask, close connection each time), long polling(hold connection open util message available or timeout), websocket(upgraded to bidirectional and persistent)
-- **stateless**: .
-- **service discovery**: .
+- **Connection**: HTTP keep-alive, polling(periodically ask, close connection each time), long polling(hold connection open util message available or timeout), websocket(upgraded to bidirectional and persistent)
+- **Stateful service**: the chat service.
+- **Service discovery (Apache Zookeeper)**: service whose primary job is to give the client a list of chat servers that the client could connect to. Provide new server for clients to establish connection with in case of a server goes offline.
+- **KVStore**:
+  1. user's online / offline status
+  2. chat history data: for horizontal scaling, low access latency, long tail of data
+  3. relational db got generic user data
+- **Status fanout**:
+  1. for small user group(<500):Presence server maintain channels(WebSocket, publish-subscribe) for each friend pair
+  2. for larger groups:fetch online status only on refresh / new user enter
+- **Wrap up**:
+  1. chat server, presence server, KVstore, API store
+  2. compression(text: gzip/bzip2), cloud storage, thumbnail
+  3. end-to-end encryption: only sender and recipent can read messages
+  4. cache: https://slack.engineering/flannel-an-application-level-edge-cache-to-make-slack-scale/
   
 #### Chapter 13 Search AutoComplete System: 
-- ****: . 
-- ****: .
-- ****: .
-- elastic search
+- Re**trie**val and opt: limit max length of prefix / cache top search queries at each node 
+- **Optimization**: AJAX request, browser caching(cache suggestions), data sampling(log 1 out of N requests)
+- **Multiple language support**: unicode character. store tries in CDNs to build different tries for different contries to diffrentiate top search queries.
+- TODO: Elastic search
 
 #### Chapter 14 Youtube: 
 - ****: . 
@@ -71,9 +78,15 @@
 - ****: .
 
 #### Chapter 15 Google Drive: 
-- ****: . 
-- ****: .
-- ****: .
+- **Estimation**:
+  1. 50 million signed up users, 10 million DAU.
+  2. 10 GB free space / user. Total space allocated:  50 million * 10 GB = 500 Petabyte.
+  3. 2 500 KB file uploaded.
+  4. 1:1 read to write ratio.
+  5. QPS for upload API: 10 million * 2 uploads / 24 hours/ 3600 seconds = ~ 240
+  6. Peak QPS = QPS * 2 = 480
+- **Storage**: AWS S3.
+- **high-level design**: Block servers (split files to 4MB per block), cloud storage, cold storage, load balancer(evenly distribute request between API servers), API servers (everything other than the upload. i.e. authentication, managing user profile, upload file metadata) , metadata db & cache, notification service, offline backup queue.
   
 ### Vocabulary:
 1. Bloom Filter

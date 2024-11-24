@@ -1,12 +1,32 @@
 # System Design Interview -- An Insider's Guide / Alex Xu / 2020
-### Key points:
+
+### Key Points:
+
 #### Chapter 1: Scale
+
 #### Chapter 5: Consistent Hashing
-virtual node
+- Virtual nodes
+
+#### Chapter 6: Key-Value Store
+- **CAP Theorem**
+- **Failure Detection**: Nodes send heartbeats to random nodes.
+- **Failure Handling**:
+  1. **Temporary**: Sloppy quorum – use available servers for reads and writes, push data when failed server recovers.
+  2. **Permanent**: [Add details]
+
+#### Chapter 7: UID Generator
+- **Clock Synchronization**: NTP – Adjust clock based on network delay between client and server.
+
 #### Chapter 8: URL Shortener
-Hash vs Base62
-#### Chapter 9: Web crawler
+- **Design**: API for shortening and redirecting URLs (301/302 status codes).
+- **Hash Functions**: CRC32, MD5, SHA-1 vs. Base 62 conversion.
+
+#### Chapter 9: Web Crawler
+- **Politeness & Priority**: URL frontier, queues.
+- **Performance**: Cache DNS resolver (DNS is synchronous).
+- **Data Validation**: Filter noise and redundancy.
 
 ### Vocabulary:
 1. Bloom Filter
-2. timestamp
+2. Timestamp
+3. URL Frontier

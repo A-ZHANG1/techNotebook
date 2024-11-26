@@ -3,18 +3,21 @@
 ### Key Points:
 
 #### Chapter 1: Scale
-- ****: . 
-- ****: .
-- ****: .
+- **Vertical scaling**: Scale up. Add more power(CPU, RAM, etc.) to your servers. 
+- **Horizontal scaling**: Scale-out. Add more servers into your pool of service.
 
 #### Chapter 2 Estimation: 
-- ****: . 
-- ****: .
-- ****: .
+- **Latency numbers**: *
+- **Availability numbers**: *.
   
 - #### Chapter 4 Rate limiter: 
-- ****: . 
-- ****: .
+- **API gateway**: middleware. Service tthat suppors rate limiting, SSL termination,authentication, IP whitelisting, servive static content.. 
+- **Algs**:
+    1. token bucket: a container that has pre-defined capacity. Each request consumes one token. Drop request if no token left. # Refill rate.
+    2. leaking bucket: requests are processed at a fixed rate. Implemented with a FIFO que. # bucket size / queue size # outflow rate
+    3. fixed window counter: devide timeline into fix-sized time window and assign a counter for each window. Drop request on reaching threshold. # Spike in traffic at the edge of a window could cause more requests than the allowed quota to go through.
+    4. sliding window log: remove outdated timestamps, keep log size same the lower than the allowed count. 
+    5. sliding window counter: mix 3 & 4.# Rolling minute.
 - ****: .
 
 #### Chapter 5: Consistent Hashing
@@ -73,9 +76,7 @@
 - TODO: Elastic search
 
 #### Chapter 14 Youtube: 
-- ****: . 
-- ****: .
-- ****: .
+- **DAG**: tasks defined in stages to be executed sequentially or parallely. DAG schedular, resource manager, task worker.
 
 #### Chapter 15 Google Drive: 
 - **Estimation**:
@@ -92,3 +93,6 @@
 1. Bloom Filter
 2. Timestamp
 3. URL Frontier
+
+### Reference
+### further reading

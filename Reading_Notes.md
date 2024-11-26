@@ -10,7 +10,7 @@
 - **Latency numbers**: *
 - **Availability numbers**: *.
   
-- #### Chapter 4 Rate limiter: 
+#### Chapter 4 Rate limiter: 
 - **API gateway**: middleware. Service tthat suppors rate limiting, SSL termination,authentication, IP whitelisting, servive static content.. 
 - **Algs**:
     1. token bucket: a container that has pre-defined capacity. Each request consumes one token. Drop request if no token left. # Refill rate.
@@ -95,4 +95,4 @@
 3. URL Frontier
 
 ### Reference
-### further reading
+### Further Reading
